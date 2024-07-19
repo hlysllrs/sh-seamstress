@@ -43,6 +43,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
+  grid-auto-flow: dense;
 }
 
 section div.split {
@@ -73,6 +74,7 @@ section div.slides img {
 
 section div.info {
   max-width: 480px;
+  padding: 32px;
 }
 
 section h2 {
@@ -81,4 +83,30 @@ section h2 {
 
 section p {
   margin: 32px 0 0 0;
+}
+
+section.alternative div.split:first-child {
+  grid-column: 2;
+}
+
+section.alternative div.split:last-child {
+  grid-column: 1;
+}
+
+@media screen and (max-width: 1080px) {
+  section {
+    display: block;
+  }
+
+  section div.split {
+    padding: 64px 0 64px 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section div.slides,
+  section div.slides img {
+    width: 80vw;
+    height: 120vw;
+  }
 }
