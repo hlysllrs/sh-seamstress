@@ -43,13 +43,13 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 section div.split {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 section div.split:first-child {

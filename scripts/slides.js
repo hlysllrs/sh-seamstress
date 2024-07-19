@@ -32,7 +32,33 @@ slides.forEach((slide) => {
 
   slide.addEventListener('click', (e) => {
     z--
-    images[current].style.zIndex = z
+
+    let direction = '150%'
+    let midAngle = 15
+
+    if (Math.random() > 0.5) {
+      direction = '-150%'
+      midAngle = -15
+    }
+
+    const currentImage = images[current]
+
+    const flipTimeline = gsap.timeline()
+
+    flipTimeline
+      .set(currentImage, { x: 0 })
+      .to(currentImage, {
+        x: direction,
+        rotation: midAngle,
+      })
+      .set(currentImage, { zIndex: z })
+      .to(currentImage, {
+        x: 0,
+        rotation: () => {
+          return 16 * Math.random() - 8
+        },
+      })
+
     current++
     current = current % images.length
   })
