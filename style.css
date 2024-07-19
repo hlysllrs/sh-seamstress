@@ -14,9 +14,29 @@ body {
 
 header {
   position: fixed;
-  top: 24px;
-  left: 24px;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  font-variation-settings: 'wght' 800;
   z-index: 100000001;
+}
+
+header h1,
+header h2 {
+  display: flex;
+}
+
+h1 span,
+h2 span {
+  display: inline-block;
+  width: 150px;
+  flex: 0 0 auto;
+}
+
+h2 span {
+  width: 250px;
 }
 
 section {
