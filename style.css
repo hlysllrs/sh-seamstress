@@ -1,28 +1,28 @@
 @font-face {
   font-family: PT Root UI;
-  src: url(assets/fonts/ptroot.woff2) format("woff2");
+  src: url(assets/fonts/ptroot.woff2) format('woff2');
 }
 
 body {
-	font-family: PT Root UI, sans-serif;
-	font-size: 24px;
-	line-height: 1.5;
-	
-	background-color: #000000;
-	color: #ffffff;
+  font-family: PT Root UI, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+
+  background-color: #000000;
+  color: #ffffff;
 }
 
 header {
   position: fixed;
   top: 24px;
   left: 24px;
+  z-index: 1;
 }
 
 section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
-
 }
 
 section div.split {
@@ -36,6 +36,15 @@ section div.split:first-child {
 }
 
 section div.slides {
+  width: 500px;
+  height: 750px;
+  position: relative;
+}
+
+section div.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 500px;
   height: 750px;
 }
